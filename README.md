@@ -509,7 +509,7 @@ When a Pokémon interacts with another (this is one-way, not two-way), the follo
 
 Make sure the program outputs the actions of Pokémon when interacting and any changes to health and consciousness.
 
-Also, track the total number of times any Pokémon has been knocked out.
+Also, track the total number of times any Pokémon has been knocked out (number of knockouts).
 
 Four Pokémon were spawned, and their stats are given below:
 | Species | Type | Max health | Attack |
@@ -528,7 +528,7 @@ Charizard interacts with Charmander \
 Charmander interacts with Charizard \
 Pikachu interacts with Charmander
 
-Print the number of knock outs that have occurred at the end.
+Print the number of knockouts that have occurred, at the end.
 
 <details><summary>Example output (wording may differ)</summary>
 
@@ -558,7 +558,7 @@ Charmander took 28 damage
 Charmander was knocked unconscious
 Pikachu took 13 damage
 Pikachu was knocked unconscious
-Total knock outs: 4
+Total knockouts: 4
 ```
 </details>
 
