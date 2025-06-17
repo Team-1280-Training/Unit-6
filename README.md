@@ -481,7 +481,8 @@ It is conventional that most data-related instance fields are private and only e
 - Encapsulation involves data hiding, which is achieved with using `private` on fields and exposing getter and setter methods
 
 ## >>Project: Pokédex
-Create a program to model interactions between *Pokémon*, creatures that can battle each other.
+Create a program to model interactions between *Pokémon*, creatures that can battle each other. \
+[`Pokemon.java`](Pokemon.java)
 
 A Pokémon is described by:
 - Species: e.g. `Pikachu`. Use this to refer to the Pokémon.
