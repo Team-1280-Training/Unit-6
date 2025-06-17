@@ -136,13 +136,35 @@ public class Person {
 Field declarations are typically put near the start of the class declaration, before the method declaration.
 
 ### >Exercise: Octopus Creation
-1. You're a genetic engineer with a strange fixation on eight-appendaged marine life. Finally, you've made the breakthrough possible for creating a new octopus in your lab simply by declaring it in a computer program.
-2. Create a class to hold your beloved octopuses. Add a field for how many tentacles they should have, with an appropriate default value.
-3. Put a `main()` method in your class (`public static void main(String[] args) {}`)
-4. Inside the `main()` method, create a new octopus.
-5. Print the number of tentacles your octopus has.
-6. The dolphins from Unit 2 attack and eat 2 of your octopus' tentacles (apparently they have a violent streak). Update the number of tentacles your octopus has.
-7. Print the number of tentacles your octopus now has.
+You're a genetic engineer with a strange fixation on eight-appendaged marine life. Finally, you've made the breakthrough possible for creating a new octopus in your lab simply by declaring it in a computer program.
+
+[`Octopus.java`](Octopus.java)
+1. Create a class to hold your beloved octopuses. Add a field for how many tentacles they should have, with an appropriate default value.
+2. Put a `main()` method in your class (`public static void main(String[] args) {}`)
+3. Inside the `main()` method, create a new octopus.
+4. Print the number of tentacles your octopus has.
+5. The dolphins from Unit 2 attack and eat 2 of your octopus' tentacles (apparently they have a violent streak). Update the number of tentacles your octopus has.
+6. Print the number of tentacles your octopus now has.
+
+<details><summary>Solution Code</summary>
+
+```java
+public class Octopus {
+    int tentacles = 8;
+    public static void main(String[] args) {
+        Octopus fredrick = new Octopus();
+        System.out.println("Fredrick has " + fredrick.tentacles + " tentacles!");
+        fredrick.tentacles -= 2;
+        System.out.println("Now he has " + fredrick.tentacles + " tentacles :(");
+    }
+}
+```
+Output:
+```
+Fredrick has 8 tentacles!
+Now he has 6 tentacles :(
+```
+</details>
 
 ## Constructors
 Constructors are special methods that are called when an object is created. Constructors can initialize objects and set up or assign default values or inputs to their fields.
@@ -266,13 +288,43 @@ Here, we use the `this` keyword to specify that it is the *field* `x` being assi
 It is only available in non-static methods; anywhere where instance fields are accessible, `this` keyword is also accessible.
 
 ### >Exercise: Louvre Museum
-1. You're in charge of documenting the artworks in the Louvre (a very famous art museum). They want you to store this data in a way that's easily accessible and organized (hmm... I wonder if OOP can help with that...).
-2. Create a class to store the `name`, `artist`, and `year` of creation of a work.
-3. Create a parameterized constructor that assigns values for these fields for each new work.
-4. Create a `main()` method (`public static void main(String[] args) {}`) inside the same class.
-5. Record the painting `Mona Lisa`, created by `Leonardo da Vinci` in `1503` with a variable of an artwork object.
-6. Record the painting `The Raft of the Medusa`, created by `Théodore Géricault` in `1818`.
-7. For the second artwork, print a one-line description with the name, the artist, and year.
+You're in charge of documenting the artworks in the Louvre (a very famous art museum). They want you to store this data in a way that's easily accessible and organized (hmm... I wonder if OOP can help with that...).
+
+[`Artwork.java`](Artwork.java)
+1. Create a class to store the `name`, `artist`, and `year` of creation of a work.
+2. Create a parameterized constructor that assigns values for these fields for each new work.
+3. Create a `main()` method (`public static void main(String[] args) {}`) inside the same class.
+4. Record the painting `Mona Lisa`, created by `Leonardo da Vinci` in `1503` with a variable of an artwork object.
+5. Record the painting `The Raft of the Medusa`, created by `Théodore Géricault` in `1818`.
+6. For the second artwork, print a one-line description with the name, the artist, and year.
+
+<details><summary>Solution Code</summary>
+
+```java
+public class Artwork {
+    String name;
+    String artist;
+    int year;
+
+    public Artwork(String name, String artist, int year) {
+        this.name = name;
+        this.artist = artist;
+        this.year = year;
+    }
+    public static void main(String[] args) {
+        Artwork monaLisa = new Artwork("Mona Lisa", "Leonardo da Vinci", 1503);
+        Artwork raft = new Artwork("The Raft of Medusa", "Théodore Géricault", 1818);
+        System.out.println("This work is called " + raft.name + ".");
+        System.out.println(raft.name + " was created by " + raft.artist + " in " + raft.year + "!");
+    }
+}
+```
+Output:
+```
+This work is called The Raft of Medusa.
+The Raft of Medusa was created by Théodore Géricault in 1818!
+```
+</details>
 
 ## Modifiers
 We can use **modifiers** to specify in their declaration how classes, fields, methods, and sometimes variables, are accessed and used. \
@@ -388,19 +440,59 @@ Constants are named in `UPPER_CASE` style, with underscores `_` to separate word
 If both `static` and `final` are used, `static` goes before `final`. The access modifier goes before those. Modifiers are put at the start of declarations.
 
 ### >Exercise: Social Media App
-1. You're currently developing a new social media app, and working on how to make user details secure.
-2. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
+You're currently developing a new social media app, and working on how to make user details secure.
+
+[`Account.java`](<Social Media App/Account.java>) [`Main.java`](<Social Media App/Main.java>)
+1. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
     - `username` should be accessible anywhere but unchangeable once
     initialized.
     - `displayName` should be accessible anywhere and can change 
     freely.
     - `password` shouldn't be accessible outside the class and can 
     change freely.
-3. Additionally, add a variable to keep track of how many users you have, starting at 0. It should be private and be independent of individual accounts.
-4. Add a parameterized constructor that initializes the three user fields. It should also increment your user count by 1 and print it.
-5. In `Main.java`, create your `Account` in the `main` method. Add a `username`, `displayName`, and `password` of your choice.
-6. Print your `displayName`.
-7. Add a statement that tries to print your `password`. If you try to run the code, you should get an error! Then, comment this line out.
+2. Additionally, add a variable to keep track of how many users you have, starting at 0. It should be private and be independent of individual accounts.
+3. Add a parameterized constructor that initializes the three user fields. It should also increment your user count by 1 and print it.
+4. In `Main.java`, create your `Account` in the `main` method. Add a `username`, `displayName`, and `password` of your choice.
+    - Note: If creating an `Account` is not working, open the command palette and try `Java: Clean Java Language Server Workspace`. This goes for any future exercises with multiple files stored in one folder.
+5. Print your `displayName`.
+6. Add a statement that tries to print your `password`. If you try to run the code, you should get an error! Then, comment this line out.
+
+<details><summary>Solution Code</summary>
+Account.java:
+
+```java
+public class Account {
+    public final String username;
+    public String displayName;
+    private String password;
+    private static int userCount = 0;
+
+    public Account(String username, String displayName, String password) {
+        this.username = username;
+        this.displayName = displayName;
+        this.password = password;
+        userCount++;
+        System.out.println("Current user count: " + userCount);
+    }
+}
+```
+Main.java:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Account myAccount = new Account("Mimikyu", "Pikachu", "password123");
+        System.out.println("My name: " + myAccount.displayName);
+        // System.out.println("My password: " + myAccount.password);
+    }
+}
+```
+Output:
+```
+Current user count: 1
+My name: Pikachu
+```
+</details>
 
 Expected output:
 ```
@@ -459,10 +551,71 @@ In this way, we can control and customize *how* fields are accessed outside the 
 It is conventional that most data-related instance fields are private and only exposed with getter and setter methods (if needed).
 
 ### >Exercise: Dog Shelter
-1. You're recording data on all the dogs at the shelter you volunteer at, and want to make sure other volunteers can use this data easily but without direct access to it.
-2. Create an `Dog` class with fields `name`, `age`, and `breed`, with getter and setter methods for each field. Don't add a constructor.
-3. In a separate `Main` class, create a new dog and set `name`, `age`, and `breed` to `Millie', `3`, and `beagle`.
-4. Print Millie's name, age, and breed, as well as a short message to encourage visitors to adopt her.
+You're recording data on all the dogs at the shelter you volunteer at, and want to make sure other volunteers can use this data easily but without direct access to it.
+
+[`Dog.java`](<Dog Shelter/Dog.java>) [`Shelter.java`](<Dog Shelter/Shelter.java>)
+1. Create an `Dog` class with fields `name`, `age`, and `breed`, with getter and setter methods for each field. Don't add a constructor.
+2. In a separate `Main` class, create a new dog and set `name`, `age`, and `breed` to `Millie', `3`, and `beagle`.
+3. Print Millie's name, age, and breed, as well as a short message to encourage visitors to adopt her.
+
+<details><summary>Solution Code</summary>
+Dog.java:
+
+```java
+public class Dog {
+    String name;
+    int age;
+    String breed;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int newAge) {
+        age = newAge;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String newBreed) {
+        breed = newBreed;
+    }
+}
+```
+Shelter.java:
+
+```java
+public class Shelter {
+    public static void main(String[] args) {
+        Dog millie = new Dog();
+        millie.setName("Millie");
+        millie.setAge(3);
+        millie.setBreed("beagle");
+
+        System.out.println("This is " + millie.getName() + "!");
+        System.out.println("She is a " + millie.getBreed() + " and " + millie.getAge() + " years old.");
+        System.out.println("She would be so happy to have a loving home!");
+    }
+}
+
+```
+Output:
+```
+This is Millie!
+She is a beagle and 3 years old.
+She would be so happy to have a loving home!
+```
+</details>
 
 ## Recap
 - Object-oriented programming (OOP) is the programming paradigm of Java, and involves classes of objects
