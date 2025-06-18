@@ -441,8 +441,9 @@ If both `static` and `final` are used, `static` goes before `final`. The access 
 
 ### >Exercise: Social Media App
 You're currently developing a new social media app, and working on how to make user details secure.
+**This exercise involves using multiple Java files!** You will need to write your program in `Account.java` *and* `Main.java`.
 
-[`Account.java`](<Social Media App/Account.java>) [`Main.java`](<Social Media App/Main.java>)
+[`Account.java`](socialmediaapp/Account.java) [`Main.java`](socialmediaapp/Main.java)
 1. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
     - `username` should be accessible anywhere but unchangeable once
     initialized.
@@ -553,7 +554,7 @@ It is conventional that most data-related instance fields are private and only e
 ### >Exercise: Dog Shelter
 You're recording data on all the dogs at the shelter you volunteer at, and want to make sure other volunteers can use this data easily but without direct access to it.
 
-[`Dog.java`](<Dog Shelter/Dog.java>) [`Shelter.java`](<Dog Shelter/Shelter.java>)
+[`Dog.java`](dogshelter/Dog.java) [`Shelter.java`](dogshelter/Shelter.java)
 1. Create an `Dog` class with fields `name`, `age`, and `breed`, with getter and setter methods for each field. Don't add a constructor.
 2. In a separate `Main` class, create a new dog and set `name`, `age`, and `breed` to `Millie', `3`, and `beagle`.
 3. Print Millie's name, age, and breed, as well as a short message to encourage visitors to adopt her.
