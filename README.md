@@ -456,11 +456,11 @@ You're currently developing a new social media app, and working on how to make u
 4. In `Main.java`, create your `Account` in the `main` method. Add a `username`, `displayName`, and `password` of your choice.
     - Note: If creating an `Account` is not working, open the command palette and try `Java: Clean Java Language Server Workspace`. This goes for any future exercises with multiple files stored in one folder.
 5. Print your `displayName`.
-6. Add a statement that tries to print your `password`. If you try to run the code, you should get an error! Then, comment this line out.
+6. Confirm that password is not exposed: add a statement that tries to print your `password`, which should error. Then, comment this line out.
 
 <details><summary>Solution Code</summary>
-Account.java:
 
+`Account.java`:
 ```java
 public class Account {
     public final String username;
@@ -477,8 +477,7 @@ public class Account {
     }
 }
 ```
-Main.java:
-
+`Main.java`:
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -560,8 +559,8 @@ You're recording data on all the dogs at the shelter you volunteer at, and want 
 3. Print Millie's name, age, and breed, as well as a short message to encourage visitors to adopt her.
 
 <details><summary>Solution Code</summary>
-Dog.java:
 
+`Dog.java`:
 ```java
 public class Dog {
     String name;
@@ -593,8 +592,7 @@ public class Dog {
     }
 }
 ```
-Shelter.java:
-
+`Shelter.java`:
 ```java
 public class Shelter {
     public static void main(String[] args) {
