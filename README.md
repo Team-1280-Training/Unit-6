@@ -443,7 +443,7 @@ If both `static` and `final` are used, `static` goes before `final`. The access 
 You're currently developing a new social media app, and working on how to make user details secure.
 **This exercise involves using multiple Java files!** You will need to write your program in `Account.java` *and* `Main.java`.
 
-[`Account.java`](socialmediaapp/Account.java) [`Main.java`](socialmediaapp/Main.java)
+[`Account.java`](app/Account.java) [`Main.java`](app/Main.java)
 1. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
     - `username` should be accessible anywhere but unchangeable once
     initialized.
