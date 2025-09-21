@@ -414,7 +414,7 @@ Static fields can be accessed through the class or through an instance of the cl
 ```
 public class Main {
     private static int n = 2;
-    
+
     public static void main(String[] args) {
         System.out.println(Main.n);
         n = 4;
@@ -647,8 +647,8 @@ A Pokémon is described by:
 
 A Pokémon has behavior:
 - Take damage: a Pokémon can be damaged by some amount
-- Check if it is unconscious; a Pokémon is unconscious if it's health is `0`
 - Heal: a Pokémon can heal by some amount, but not over its max health
+- Check if it is unconscious or conscious; a Pokémon is unconscious if its health is `0`
 - Check if it is friends with another Pokémon: a Pokémon is friends with another if they have the same type
 - Interact with another Pokémon
 
@@ -665,6 +665,7 @@ Make sure the program outputs the actions of Pokémon when interacting and any c
 
 Also, track the total number of times any Pokémon has been knocked out (number of knockouts).
 
+Model the following situation: \
 Four Pokémon were spawned, and their stats are given below:
 | Species | Type | Max health | Attack |
 | - | - | - | - |
