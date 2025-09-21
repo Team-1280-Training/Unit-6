@@ -444,6 +444,8 @@ If both `static` and `final` are used, `static` goes before `final`. The access 
 You're currently developing a new social media app, and working on how to make user details secure.
 **This exercise involves using multiple Java files!** You will need to write your program in `Account.java` *and* `Main.java`.
 
+> **Note:** If there are ever strange errors about packages or imports, open the command palette and try `Java: Clean Java Language Server Workspace`
+
 1. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
     - `username` should be accessible anywhere but unchangeable once
     initialized.
@@ -454,7 +456,6 @@ You're currently developing a new social media app, and working on how to make u
 2. Additionally, add a variable to keep track of how many users you have, starting at 0. It should be private and be independent of individual accounts.
 3. Add a parameterized constructor that initializes the three user fields. It should also increment your user count by 1 and print it.
 4. In `Main.java`, create your `Account` in the `main` method. Add a `username`, `displayName`, and `password` of your choice.
-    - Note: If creating an `Account` is not working, open the command palette and try `Java: Clean Java Language Server Workspace`. This goes for any future exercises with multiple files stored in one folder.
 5. Print your `displayName`.
 6. Confirm that password is not exposed: add a statement that tries to print your `password`, which should error. Then, comment this line out.
 
