@@ -136,9 +136,9 @@ public class Person {
 Field declarations are typically put near the start of the class declaration, before the method declaration.
 
 ### >Exercise: Octopus Creation
+[`Octopus.java`](Octopus.java) \
 You're a genetic engineer with a strange fixation on eight-appendaged marine life. Finally, you've made the breakthrough possible for creating a new octopus in your lab simply by declaring it in a computer program.
 
-[`Octopus.java`](Octopus.java)
 1. Create a class to hold your beloved octopuses. Add a field for how many tentacles they should have, with an appropriate default value.
 2. Put a `main()` method in your class (`public static void main(String[] args) {}`)
 3. Inside the `main()` method, create a new octopus.
@@ -288,9 +288,9 @@ Here, we use the `this` keyword to specify that it is the *field* `x` being assi
 It is only available in non-static methods; anywhere where instance fields are accessible, `this` keyword is also accessible.
 
 ### >Exercise: Louvre Museum
+[`Artwork.java`](Artwork.java) \
 You're in charge of documenting the artworks in the Louvre (a very famous art museum). They want you to store this data in a way that's easily accessible and organized (hmm... I wonder if OOP can help with that...).
 
-[`Artwork.java`](Artwork.java)
 1. Create a class to store the `name`, `artist`, and `year` of creation of a work.
 2. Create a parameterized constructor that assigns values for these fields for each new work.
 3. Create a `main()` method (`public static void main(String[] args) {}`) inside the same class.
@@ -440,10 +440,10 @@ Constants are named in `UPPER_CASE` style, with underscores `_` to separate word
 If both `static` and `final` are used, `static` goes before `final`. The access modifier goes before those. Modifiers are put at the start of declarations.
 
 ### >Exercise: Social Media App
+[`Account.java`](app/Account.java) [`Main.java`](app/Main.java) \
 You're currently developing a new social media app, and working on how to make user details secure.
 **This exercise involves using multiple Java files!** You will need to write your program in `Account.java` *and* `Main.java`.
 
-[`Account.java`](app/Account.java) [`Main.java`](app/Main.java)
 1. Start in `Account.java` Each user's account should have three fields, `username`, `displayName`, and `password`.
     - `username` should be accessible anywhere but unchangeable once
     initialized.
@@ -551,9 +551,9 @@ In this way, we can control and customize *how* fields are accessed outside the 
 It is conventional that most data-related instance fields are private and only exposed with getter and setter methods (if needed).
 
 ### >Exercise: Dog Shelter
+[`Dog.java`](dogshelter/Dog.java) [`Shelter.java`](dogshelter/Shelter.java) \
 You're recording data on all the dogs at the shelter you volunteer at, and want to make sure other volunteers can use this data easily but without direct access to it.
 
-[`Dog.java`](dogshelter/Dog.java) [`Shelter.java`](dogshelter/Shelter.java)
 1. Create an `Dog` class with fields `name`, `age`, and `breed`, with getter and setter methods for each field. Don't add a constructor.
 2. In a separate `Main` class, create a new dog and set `name`, `age`, and `breed` to `Millie', `3`, and `beagle`.
 3. Print Millie's name, age, and breed, as well as a short message to encourage visitors to adopt her.
