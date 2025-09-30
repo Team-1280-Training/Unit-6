@@ -337,23 +337,18 @@ When used, they are placed before the data type.
 Note that packages and subclasses will be taught in the next unit.
 
 Access modifiers for **classes**:  
-| Modifier | Description                                 |
-|----------|---------------------------------------------|
-| `public` | The class is accessible by any other class. |
-| default  | When a modifier isn't specified, the class  |
-|          | is only accessible to classes in the same   |
-|          | package.                                    |
+| Modifier | Description |
+| - | - |
+| `public` | The class is accessible by any other class |
+| (default) | When a modifier isn't specified, the class is only accessible to classes in the same package |
 
 Access modifiers for **members**:
-| Modifier    | Description                                 |
-|-------------|---------------------------------------------|
-|   `public`  | The member is accessible to all classes.    |
-|  `private`  | The member is only accessible inside the    |
-|             | same class                                  |
-|   default   | When a modifier isn't specified, the member |
-|             | is only accessible in the same package.     |
-| `protected` | The member is accessible in the same        |
-|             | package and in *subclasses*.                |
+| Modifier | Description |
+| - | - |
+| `public` | The member is accessible to all classes |
+| `private` | The member is only accessible inside the same class |
+| (default) | When a modifier isn't specified, the member is only accessible in the same package. |
+| `protected` | The member is accessible in the same package and in *subclasses*. |
 
 What can be accessed by each modifier?
 
