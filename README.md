@@ -5,7 +5,7 @@
 
 The Java programming language is built around this core **paradigm**, a style or way of programming. OOP is the most popular programming paradigm because of how well it matches human thinking.
 
-Unit 6 and Unit 7 can be difficult to understand because of the more conceptual ideas. If you still have a hard time understanding the concepts in the lesson, ask the mentors for extra explanation.
+Unit 6 and Unit 7 can be difficult to understand because of the more conceptual ideas. If you still have a hard time understanding the concepts in the lesson, ask the instructors for extra explanation.
 
 ### Table of Contents
 - [Introduction](#introduction)
