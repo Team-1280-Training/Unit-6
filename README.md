@@ -151,6 +151,7 @@ You're a genetic engineer with a strange fixation on eight-appendaged marine lif
 ```java
 public class Octopus {
     int tentacles = 8;
+
     public static void main(String[] args) {
         Octopus fredrick = new Octopus();
         System.out.println("Fredrick has " + fredrick.tentacles + " tentacles!");
@@ -311,6 +312,7 @@ public class Artwork {
         this.artist = artist;
         this.year = year;
     }
+
     public static void main(String[] args) {
         Artwork monaLisa = new Artwork("Mona Lisa", "Leonardo da Vinci", 1503);
         Artwork raft = new Artwork("The Raft of Medusa", "Théodore Géricault", 1818);
