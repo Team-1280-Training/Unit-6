@@ -634,14 +634,14 @@ She would be so happy to have a loving home!
 Create a program to model interactions between *Pokémon*, creatures that can battle each other. \
 [`Pokemon.java`](Pokemon.java)
 
-A Pokémon is described by:
+A Pokémon is described by (fields):
 - Species: e.g. `Pikachu`. Use this to refer to the Pokémon.
 - Type: e.g. `Water`, `Fire`
 - Max health: integer e.g. `100`
 - Health: current health, cannot go below `0` or above max health. Initially starts at max health.
 - Attack: integer e.g. `50`, how much damage this Pokémon does to a Pokémon it attacks
 
-A Pokémon has behavior:
+A Pokémon has behavior (methods):
 - Take damage: a Pokémon can be damaged by some amount
 - Heal: a Pokémon can heal by some amount, but not over its max health
 - Check if it is unconscious or conscious; a Pokémon is unconscious if its health is `0`
